@@ -1,0 +1,142 @@
+@font-face {
+  font-family: Font General;
+  src: url(../public/fonts/AbrilFatface-Regular.ttf);
+}
+
+.App {
+  text-align: center;
+}
+
+h3{
+ display: block; 
+}
+
+h1{
+  font-family: Font General;
+  font-size: 5em;
+  margin: 20px;
+}
+
+.listaTipos{
+  display: inline-block;
+  border: 1px solid;
+  box-shadow: 1px 1px 1px;
+  margin: 5px;
+  border-radius: 5px;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.navTypes{
+  display: inline-flex;
+}
+
+.selected {
+  background-color: #f1b24a;
+}
+
+.icono{
+  width: 20px;
+  vertical-align: bottom;
+}
+
+h2{
+  font-family: Font General;
+  border: 2px solid #f1b24a;
+  display: inline-block;
+  padding-left: 50px;
+  padding-right: 30px; 
+  border-radius: 30px;
+  font-size: 2em;
+}
+
+body{
+  font-family: Georgia;
+  background-color: #4D774E;
+  color: #ffffff;
+}
+h2{
+  margin: 10px;
+}
+
+button{
+  display: inline-block;
+  margin: 10px;
+  background-color: #f1b24a;
+  border-radius: 50px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  width: 130px;
+  padding: 10px;
+  align-self: center;
+  font-size: 1em;
+}
+
+.btnflecharriba{
+  width: 50px;
+  align-self: flex-end;
+  font-size: 1.5em;
+}
+
+.evento{
+  flex-wrap: wrap;
+  width: 18%;
+  background-color: #9dc88d;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  text-align: center;
+} 
+
+.fotos{
+  max-width: 540px;
+  width: 100%;
+}
+
+li{
+  list-style: none;
+}
+
+ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 95%;
+  padding: 0;
+}
+
+.eventosCards{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+}
+
+.buscador{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  font-size: 2em;
+  border-radius: 15px;
+  width: 40%;
+  align-self: center;
+}
+
+button.language{
+  background-color:#4D774E;
+  box-shadow: 1px 1px 1px;
+  font-size: large;
+  width: 60px;
+}
+
+button.selected{
+  background-color: #f1b24a;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.btnlang{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 25px;
+  margin-top: 10px;
+}
