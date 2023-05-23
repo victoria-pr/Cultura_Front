@@ -1,15 +1,14 @@
-import { useState, useEffect, useRef, useContext } from "react";
-import "../EventList.css";
+import { useState, useEffect, useContext } from "react";
+import "../EventList.scss";
 import EventModal from "./EventModal";
 import { LanguageContext } from "../App";
 
-const EventList = ({eventType}) => {
+const EventList = ({eventType, refTo}) => {
     const [events, setEvents] = useState([]);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
     const [selectedEvent, setSelectedEvent] = useState(null);
     const [searchWord, setSearchWord] = useState(""); //para el buscador de eventos
-    const titleRef = useRef(null);
     const language = useContext(LanguageContext);
 
     useEffect( () => {
@@ -34,7 +33,7 @@ const EventList = ({eventType}) => {
         },[eventType]);  
 
      useEffect( () => {
-        if(searchWord.length < 3) {
+        if(searchWord.length  < 3 && searchWord !== "") {
             return;
         }
         getData()
@@ -59,15 +58,15 @@ const EventList = ({eventType}) => {
             });
         }
 
-        const nextPage = () => {
-            if (page < totalPages) {
-                setPage(page + 1);
-            }
+    const nextPage = () => {
+        if (page < totalPages) {
+            setPage(page + 1);
         }
+    }
 
-        const goToTop = () => {
-            titleRef.current.scrollIntoView({behavior: "smooth"});
-        }
+    const goToTop = () => {
+        refTo.current.scrollIntoView({behavior: "smooth"});
+    }
 
     const showmore ={
         "eu": "Erakutsi gehiago",
@@ -81,7 +80,7 @@ const EventList = ({eventType}) => {
 
     return (
         <section className="eventosCards" >
-            <h2 ref={titleRef} >{nextEvent[language]}</h2>
+            <h2>{nextEvent[language]}</h2>
             <input className="buscador" type="text" placeholder="..." value={searchWord} onChange={(event)=>setSearchWord(event.target.value)}/>
             <ul className="eventos">
 

@@ -1,0 +1,50 @@
+$md-color : rgb(151, 151, 151, 0.98);
+$md-bg-color : black;
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 15%;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    overflow: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    background-color: $md-color;
+    flex-grow: initial;
+    font-size: 1.5em;
+    &.show {
+        display: block;
+    }
+    & a {
+        color: rgb(33, 75, 53);
+        &:hover {
+            color: rgb(81, 81, 145);
+        }
+}
+}
+
+.modal-background {
+    display: none;
+    background-color: $md-bg-color;
+    position: fixed;
+    z-index: 1;
+    left: 15%;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.modal.show, .modal-background.show{
+    display: block;
+}
+
+.contenido{
+    width: 80%;
+    margin: 10% auto;
+}

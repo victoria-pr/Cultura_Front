@@ -1,5 +1,5 @@
 import { useState,useEffect,useContext } from "react";
-import "./css/EventModal.css"
+import "./css/EventModal.scss"
 import { LanguageContext } from "../App";
 
 const EventModal = ({event, className, close}) => {
